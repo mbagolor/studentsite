@@ -1,0 +1,18 @@
+/* GLOBAL RESET */
+* {box-sizing: border-box;}
+body {margin: 0;}
+
+/* GLOBAL COLORS */
+body{
+    background-color: rgba(0,0,0,1);
+    color: rgba(255,255,255,.8)
+}
+a { color: turquoise}
+
+/* TYPOGRAPHY */
+body {
+    font-family:Arial, Helvetica, sans-serif
+    font-size: 88.75%; /* 14px */
+    line-height:1.4;
+}
+p {max-width: 35em;}
