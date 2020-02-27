@@ -195,6 +195,73 @@ body {
 
 }
 
+/* SITE STRUCTURE*/
+
+
+/* SITE HEADER*/
+
+.site-header {
+    padding: 1em .5em;
+}
+
+@media (min-width: 768px) {
+    .site-header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-header a{
+    color: rgba(0,0,0,.8);
+    text-decoration: none;
+}
+.site-header a:hover {
+    color: rgba(0,0,0,1); 
+}
+
+
+/*SITE ID (LOGO)*/
+.site-id h1 {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+.site-id a {
+    display: block;
+    padding: .25em 0;
+}
+
+
+/*SITE NAV (PRIMARY TOP NAV)*/
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav li {
+    list-style: none;
+}
+
+.site-nav a {
+    display: block;
+    padding: .5em 1em;
+
+}
+
+/*SITE MAIN*/
+.site-main {
+
+}
+
+/*SITE FOOTER*/
+.site-footer {
+
+}
+
+
 /* ------------------------ */
 /* ------------------------ */
 /* ------------------------ */
@@ -216,7 +283,7 @@ body {
 body.demo::before {
     content: "Small Screen (0 - 767px)";
     display: block;
-    background: red; 
+    background: black; 
     color: white;
     text-align: center;
     padding: .2em;
@@ -253,3 +320,25 @@ body.demo::before {
     color: rgba(255,0,0,.2);
     box-shadow: 0 0 1px 1px inset rgba(255,0,0,.5);
 } */
+
+/*FOR DEV TESING ONLY*/
+
+/* *{
+    background-color: rgba(255, 0, 0, .2);
+    color:rgba(255, 0, 0, .1);
+    box-shadow: 0 0 0 3px inset rgba(255, 0, 0, 1);
+}
+
+.site-header {
+    background-color: rgba(0, 255, 0, .4);
+    box-shadow: 0 0 0 3px inset rgba(0, 255, 0, 1); 
+}
+.site-main {
+    background-color: rgba(0, 0, 255, .4);
+    box-shadow: 0 0 0 3px inset rgba(0, 0, 255, 1);
+}
+.site-footer {
+    background-color: rgba(255, 255, 0, .4;
+    box-shadow: 0 0 0 3px inset rgba(255, 255, 0, 1);
+} */
+
