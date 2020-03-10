@@ -256,6 +256,47 @@ body {
     padding: .5em 1em;
 }
 
+/*Menu Button*/
+.menu-button {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+/*Toggle Nav*/
+
+@media (max-width:767px) {
+
+}
+
+    .toggle-nav. .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .toggle-nav .menu-button {
+        position: static;
+        left: auto;
+    }
+
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+
+    .toggle-nav .site-nav ul {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .toggle-nav .expanded .site-nav ul {
+        position: absolute;
+        left: auto;
+        display: block;
+    }
+
 /* SITE MAIN (Main Content Area) */
 .site-main {
 
