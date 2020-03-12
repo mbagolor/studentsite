@@ -80,6 +80,19 @@ h6 {
 p {
     max-width: 35em;
 }
+/* TYPE SPECIMEN */
+
+.headline {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.subheadline {
+    font-size: 2.25em;
+    line-height: 1.2 ;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 7);
+}
 
 /* LINKS */
 a {
@@ -89,6 +102,11 @@ a {
 a:hover {
     color: rgba(0, 0, 51, 1);
     text-decoration: underline;
+}
+
+/* HELPERS */
+.hideonlarge {
+    visibility: hidden;
 }
 
 /* MEDIA */
@@ -377,8 +395,17 @@ section {
 }
 
 
+/* ARTICLES */
+article {
+    padding: 4em 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
+article .date +p::first-letter{
+    color: red
+}
 
 /* ------------------------ */
 /* ------------------------ */
