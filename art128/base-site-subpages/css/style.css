@@ -91,7 +91,7 @@ p {
     font-size: 2.25em;
     line-height: 1.2 ;
     font-weight: normal;
-    color: rgba(0, 0, 0, 7);
+    color: red);
 }
 
 /* LINKS */
@@ -404,9 +404,13 @@ article {
 }
 
 article .date +p::first-letter{
-    color: red
+    color: red;
+    
 }
 
+article .date +p::first-line{
+
+}
 /* ------------------------ */
 /* ------------------------ */
 /* ------------------------ */
