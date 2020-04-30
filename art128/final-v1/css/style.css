@@ -82,6 +82,9 @@ p {
 }
 /* TYPE SPECIMEN */
 
+
+
+
 .headline {
     font-size: 4em;
     font-weight: bold;
@@ -223,13 +226,19 @@ body {
 
 .site-header {
     padding: 1em .5em;
+    min-height: 100vh;
+    background-image: url('../img/insidehana.gif');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .site-header .container {
         display: flex;
         justify-content: space-between;
-    }
+    } */
 }
 
 .site-header a,
@@ -385,6 +394,8 @@ section {
     padding: 4em 0;
 }
 
+
+
 .hero {
     text-align: center;
     background-color: rgba(204,204,204,1);
@@ -495,3 +506,5 @@ body.demo::before {
     background-color: rgba(255, 255, 0, 0.4);
     box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
 } */
+
+
