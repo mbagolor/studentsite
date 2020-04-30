@@ -225,7 +225,6 @@ body {
 
 body {
     background-image: url('../img/background.gif');
-    background-color: #cccccc;
     background-size: cover;
     background-position: center;
     place-items: center
@@ -240,7 +239,7 @@ body {
     background-size: cover;
     background-position: center;
     display: grid;
-    place-items: center
+    place-items: center;
 }
 
 /* @media (min-width: 768px) {
@@ -248,7 +247,7 @@ body {
         display: flex;
         justify-content: space-between;
     } */
-}
+
 
 .site-header a,
 .site-footer a {
@@ -394,9 +393,7 @@ body {
 }
 
 /* SITE MAIN (Main Content Area) */
-.site-main {
 
-}
 
 /* SECTIONS */
 section {
@@ -435,9 +432,7 @@ article .date +p::first-letter{
     
 }
 
-article .date +p::first-line{
 
-}
 
 /* FORMS */
 
