@@ -98,7 +98,8 @@ p {
 }
 
 .sectionhead {
-    text-align: center;
+    /* text-align: center;
+    contain About,Menu, Contact */
 }
 
 /* LINKS */
