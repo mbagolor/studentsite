@@ -1,7 +1,6 @@
-  /* ----------------------
+/* ----------------------
 CSS TABLE OF CONTENTS 
 # BASE CONTENT (GLOBALS)
-
     # RESET
     # COLORS
     # TYPOGRAPHY
@@ -23,8 +22,8 @@ CSS TABLE OF CONTENTS
 # SITE STRUCTURE
     # SITE HEADER
         # SITE ID
-    # SITE FOOTER
     # SITE MAIN
+    # SITE FOOTER
     # SITE NAVIGATION
         # TOGGLE NAV
     # SECTIONS
@@ -35,12 +34,27 @@ CSS TABLE OF CONTENTS
 body { margin: 0; }
 * { box-sizing: border-box; }
 
+
+
+
+/* Color */
+body {
+    background-image: url('../img/background.png'); 
+    background-size: cover;
+    
+    color :white;
+
+
+}
+
+
 /* TYPOGRAPHY */
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Philosopher, Arial, sans-serif;
     font-size: 100%; /* This sets the value of 1em */ 
     line-height: 1.4;
+    
 }
 
 /* HEADINGS */
@@ -51,11 +65,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 3em; /* 48px based on a 16px em */
     line-height: 1;
+    color: white;
+   
+    
 }
 
 h2 {
     font-size: 2.25em; /* 36px based on a 16px em */
     line-height: 1.1;
+    color:white;
 }
 
 h3 {
@@ -76,59 +94,64 @@ h6 {
     font-size: 1em; /* 16px based on a 16px em */
 }
 
+
+
+    
+  
+  
+
+
 /* PARAGRAPHS */
-p {
-    max-width: 35em;
-}
-/* TYPE SPECIMEN */
+
+
+/*  TYPE SPECIMEN */
 
 
 
 
 .headline {
-    font-size: 4em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
 .subheadline {
-    font-size: 2.25em;
-    line-height: 1.2 ;
-    font-weight: normal;
-    color: rgba(0, 0, 0, 7);
+    font-size: 3em;
+    font-weight: 1.2;
+    color: rgba(0,0,0,.7);
+    
+
 }
 
-.sectionhead {
-    /* text-align: center;
-    contain About,Menu, Contact */
+.date {
+    font-style: italic;
+    color: rgba(0,0,0,.5);
+    
 }
+
 
 /* LINKS */
 a {
-    color: rgba(0, 51, 102, 1);
+    color: white;
     text-decoration: none;
+    
 }
 a:hover {
-    color: rgba(0, 0, 51, 1);
-    text-decoration: underline;
+    color: white;
+    
 }
-
-/* HELPERS */
-.hideonlarge {
-    visibility: hidden;
-}
-
 /* MEDIA */
 img {
     max-width: 100%;
     height: auto;
 }
 
+
 /* BUTTONS */
 .button,
 button {
     font-size: 1em;
     display: inline-block;
-    background-color: rgba(0, 51, 102, 1);
+    background-color:white;
     color: rgba(255,255,255,1);
     padding: 1em 1.5em;
     border-radius: .5em;
@@ -154,6 +177,31 @@ button:hover {
     color: rgba(255,255,255,1);
     background-color: rgba(0, 0, 51, 1);
 }
+/* BLOCKQUOTES */
+blockquote{
+    font-size: 1em;
+    line-height: 1.2em;
+    font-style: italic;
+    font-weight: thin;
+    color:white;
+}
+
+
+/* HELPERS */
+@media(min-width:768px){
+    .hideonlarge {
+        visibility: hidden;
+    }
+}
+/* MEDIA */
+Img {
+    max-width: 100%;
+    height: auto;
+}
+.comments img {
+    text-align: center;
+}
+
 
 /* BASE LAYOUT */
 
@@ -163,11 +211,33 @@ body {
 }
 /* CONTAINER */
 .container {
-    padding: 0 1em;
-    margin: 0 auto;
+    padding: 0 4em;
+    margin: 0 auto; 
+}
+ 
+
     /* overflow-x: hidden; */
+
+
+.right {
+    width: 70%;
+    
+    padding-right: 5em;
 }
 
+.comments {
+    width: 30%;
+    background-color: lightblue;
+}
+
+.instructor {
+    width: 30%;
+}
+
+/* STYLE */
+.img lotus logo2 {
+    text-align: center;
+}
 /* MEDIA QUERIES */
 /* FOR MID-SIZED SCREENS/TABLETS (and Larger) */
 @media (min-width:768px) {
@@ -190,6 +260,7 @@ body {
 .column {
     margin-top: 1%;
     margin-bottom: 1%;
+    
 }
 
 @media (min-width: 768px) {
@@ -202,10 +273,14 @@ body {
         flex-grow: 0;
         margin-left: 1%;
         margin-right: 1%;
+
+       
     }
     .one-whole { width: 100%; }
     .one-half { width: 48%; }
     .one-third { width: 31.3333%; }
+   
+
     .push-one-third { margin-left: 34.3333%; }
     .two-thirds { width: 64.6666%; }
     .one-fourth { width: 23%; }
@@ -213,12 +288,24 @@ body {
 
     .row.centered {
         justify-content: center;
+        display: flex;
+            
+            
     }
+    
+
 
     .column.centered {
         margin-left: auto;
         margin-right: auto;
     }
+    .row.swap {
+        flex-direction: row-reverse;
+    }
+    .row.align-bottom {
+        align-items: flex-end;
+    }
+
 }
 
 /* SITE STRUCTURE */
@@ -239,14 +326,11 @@ body {
     background-size: cover;
     background-position: center;
     display: grid;
-    place-items: center;
+    grid-template-rows: 1fr auto;
+    
 }
 
-@media (min-width: 768px) {
-    .site-header .container {
-        display: flex;
-        justify-content: space-between;
-    }
+
 
 
 .site-header a,
@@ -256,7 +340,19 @@ body {
 }
 .site-header a:hover,
 .site-footer a:hover {
-    color: rgba(0,0,0,1);
+    color: rgba(0,0,0,.8);
+    font-style: bold;
+
+}
+
+.class {
+    text-align: center;
+}
+
+.sectionhead {
+    text-align: center;
+    
+    
 }
 
 /* SITE FOOTER */
@@ -264,147 +360,199 @@ body {
     padding: 1em .5em 2em .5em;
 }
 
-
 /* SITE ID (LOGO) */
-.site-id h1 {
-    font-size: 1.5em;
-    margin: 0;
-    color: rgba(0, 0, 0, .6);
-    font-weight: normal;
+
+.site-id {
+    text-align: center;
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+   
+   
 }
 
-.site-id h1 a {
-    display: inline block;
-    padding: .25em 0;
-    color: rgba(0, 0, 0, 1);
-    font-weight: bold;
+.site-id h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-align: center;
+
 }
+
+.site-id a {
+    display: inline-block;
+    color: white;
+
+}
+
+/* Table */
+table th{
+    padding: 6px 3px
+    
+    
+}
+
+table td{
+    padding: 10px 12px
+    
+}
+th {
+    font-size: 2em;
+    color: #8CB46C
+    
+    
+}
+td {
+    font-size: 1.2em;
+    color: rgb(133, 122, 122);
+
+}
+    
+
+
 
 /* SITE NAV (Primary Top Nav) */
+
+.site-nav {
+    background-color: none;
+}
+
+
 .site-nav ul {
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    font-size: 2em;
+    
+}
+
+
+.subsection li {
+    display: inline;
+    justify-content: center;
+    list-style: none;
+    font-size: 2em;
+    font-style: bold;
+    
+
 }
 
 .site-nav li {
     list-style: none;
+    padding-bottom: -2em;
 }
 
 .site-nav a {
     display: block;
-    padding: .5em;
+    padding: .5em 1em;
 }
 
-/*Menu Button*/
+/* MENU BUTTON */
 .menu-button {
     position: absolute;
     left: -9999px;
-    padding: .5em;
+    padding: .5em 1em;
 }
-
 .menu-button:hover {
     cursor: pointer;
 }
 
-.menu-button::selection{
-    color: none;
-    background: none;
-}
-/*Toggle Nav*/
 
-@media (max-width:767px) {
+/* TOGGLE-NAV */
+
+@media (max-width: 767px) {
 
     .toggle-nav .site-id h1 {
         text-align: left;
     }
-
+    
     .toggle-nav .menu-button {
         position: absolute;
-        left: auto;
+        left: auto;  
         top: 1em;
         right: 1.5em;
     }
 
     .toggle-nav .site-nav {
         text-align: center;
-    }
+        }
 
-    /* HIDE NAV ON SMALL SCREENS BY DEFULT */
-    .toggle-nav .site-nav ul {
+
+        /* HIDE NAV ON SMALL SCREENS BY DEFAULT */
+     .toggle-nav .site-nav ul {
         position: absolute;
-        left: -9999px;
-        transition: 1em;
-        margin-top: 1em;
-        
+        left: -9999px;    
     }
-
-    /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
+        /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
     .toggle-nav.expanded .site-nav ul {
         position: static;
         left: auto;
         display: block;
-      
     }
 
     .toggle-nav.expanded .site-nav a {
         background: rgba(0,51,102,1);
-        color: rgba(255,255,255,1);
+        color: rgba(255, 255, 255, 1);
         margin: .5em 0;
         padding: 1em;
-    }
-    
-    .toggle-nav.expanded .site-nav .a:hover {
-        background: rgba(0, 0, 51, 1);
-    }
+}
 
-    /* ANIMATING THE TOGGLE NAV
-    .toggle-nav {
+.toggle-nav.expanded .site-nav a:hover {
+    background: rgba(0, 0, 51, 1);
+}
+
+/*  ANIMATIN THE TOGGLE NAV */
+.toggle-nav .site-nav ul {
         transition: all 1s ease;
         max-height: 0;
-    }
-    .toggle-nav .expanded .site-nav ul {
-        max-height: 400;
-    } */
+}
+.toggle-nav.expanded .site-nav ul {
+    max-height: 400px;
+}
 
 }
 
 /* NAVICON */
+
+
 .navicon {
-    color: rgba(0,0,0,0);
-    padding: 0; 
+    color: rgba(0, 0, 0, 0);
+    padding: 0;
 }
 
 .navicon::after {
     content: "\2630";
+    color: rgba(0.0.0.1);
     display: inline-block;
-    color: rgba(0,0,0,1);
-    font-size: 1.5em;  
+    font-size: 1.5em;
     transform: rotate(0deg);
-       
-}    
+}
 
 .expanded .navicon::after {
     content: "\2715";
-    transform: rotate(4deg);
-    
+    transform: rotate(-90deg);
+    transition: transform .4s ease-out;
 }
 
-/* SITE MAIN (Main Content Area) */
 
+
+
+
+
+/* SITE MAIN (Main Content Area) */
 
 /* SECTIONS */
 section {
     padding: 4em 0;
 }
 
-
-
 .hero {
     text-align: center;
-    background-color: rgba(204,204,204,1);
+    background-color: rgba(0,0,0,.1);
     padding: 6em 1em;
 }
 
@@ -427,17 +575,67 @@ article {
     margin-right: auto;
 }
 
-article .date +p::first-letter{
+article .date + p::first-letter {
     color: red;
-    
+    font-size: 6em;
+    line-height: 1;
+    font-weight: bold;
+    float: left;
+    margin: 0 .1em 0 0;
+    padding: 0;
+    display: block;
 }
 
+article .date + p::first-line {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  /* FORMS */
 
 
-/* FORMS */
+  form {
+      padding: 2em ;
+      line-height: 3em;
+      margin: 0 auto;
+      width: 400px;
+      font-size:1.5em;
+   }
 
-label, input {
-    display: block;
+  label, input {
+      display: block;
+      color: white;
+      
+      
+  }
+
+  label, input[type="text"], textarea {
+      width: 100%
+      
+  }
+
+  input, textarea {
+      background-color: white;
+      border: 1px white;
+      box-sizing: border-box;
+      border-radius:4px;
+      font-size: 30px;
+  }
+
+  .inputs{
+      width: 400px;
+  }
+
+  
+  .btn-area {
+      display: flex;
+}
+
+address {
+    color: white;
+    line-height: 1.3em;
+    text-align: center;
+
 }
 /* ------------------------ */
 /* ------------------------ */
@@ -510,5 +708,3 @@ body.demo::before {
     background-color: rgba(255, 255, 0, 0.4);
     box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
 } */
-
-
